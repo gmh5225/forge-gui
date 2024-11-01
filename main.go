@@ -13,6 +13,13 @@ import (
 var content embed.FS
 
 func main() {
+	// // redirect log to file
+	// logFile, err := os.OpenFile("forge-gui.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	// if err == nil {
+	// 	log.SetOutput(logFile)
+	// 	defer logFile.Close()
+	// }
+
 	w := webview2.NewWithOptions(webview2.WebViewOptions{
 		Debug:     true,
 		AutoFocus: true,
