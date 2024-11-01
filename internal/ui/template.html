@@ -296,7 +296,6 @@
             const text = element.textContent.replace('Copy', '').trim();
             
             navigator.clipboard.writeText(text).then(function() {
-                alert('Command copied to clipboard');
             }).catch(function(err) {
                 console.error('Failed to copy:', err);
             });
