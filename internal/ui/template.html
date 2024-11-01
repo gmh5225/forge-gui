@@ -163,19 +163,19 @@
     <div id="Deploy" class="tabcontent" style="display: block;">
         <div class="form-group">
             <label>Script Path:</label>
-            <input type="text" id="deploy-script" placeholder="e.g., script/Deploy.s.sol:DeployScript">
+            <input type="text" id="deploy-script" value="script/Deploy.s.sol:DeployScript">
         </div>
         <div class="form-group">
             <label>RPC URL:</label>
-            <input type="text" id="deploy-rpcUrl" placeholder="e.g., arbitrum_sepolia">
+            <input type="text" id="deploy-rpcUrl" value="arbitrum_sepolia">
         </div>
         <div class="checkbox-container">
             <div class="checkbox-group">
-                <input type="checkbox" id="deploy-broadcast">
+                <input type="checkbox" id="deploy-broadcast" checked>
                 <label for="deploy-broadcast">Broadcast</label>
             </div>
             <div class="checkbox-group">
-                <input type="checkbox" id="deploy-verify">
+                <input type="checkbox" id="deploy-verify" checked>
                 <label for="deploy-verify">Verify</label>
             </div>
         </div>
@@ -185,7 +185,7 @@
                 <option value="-v">-v</option>
                 <option value="-vv">-vv</option>
                 <option value="-vvv">-vvv</option>
-                <option value="-vvvv">-vvvv</option>
+                <option value="-vvvv" selected>-vvvv</option>
             </select>
         </div>
         <button class="execute-btn" onclick="buildDeployCommand()">Generate Command</button>
@@ -196,11 +196,11 @@
     <div id="Build" class="tabcontent">
         <div class="form-group">
             <label>Contract Path:</label>
-            <input type="text" id="build-path" placeholder="e.g., src/Contract.sol">
+            <input type="text" id="build-path" value="src/Contract.sol">
         </div>
         <div class="checkbox-container">
             <div class="checkbox-group">
-                <input type="checkbox" id="build-optimize">
+                <input type="checkbox" id="build-optimize" checked>
                 <label for="build-optimize">Optimize</label>
             </div>
             <div class="form-group" style="flex: 1;">
@@ -216,17 +216,17 @@
     <div id="Test" class="tabcontent">
         <div class="form-group">
             <label>Test File Path:</label>
-            <input type="text" id="test-path" placeholder="e.g., test/Contract.t.sol">
+            <input type="text" id="test-path" value="test/Contract.t.sol">
         </div>
         <div class="checkbox-container">
             <div class="checkbox-group">
-                <input type="checkbox" id="test-match">
+                <input type="checkbox" id="test-match" checked>
                 <label for="test-match">Match Specific Test</label>
             </div>
         </div>
         <div class="form-group">
             <label>Test Function Pattern:</label>
-            <input type="text" id="test-pattern" placeholder="e.g., testDeposit">
+            <input type="text" id="test-pattern" value="testDeposit">
         </div>
         <div class="form-group">
             <label>Verbosity:</label>
@@ -234,7 +234,7 @@
                 <option value="-v">-v</option>
                 <option value="-vv">-vv</option>
                 <option value="-vvv">-vvv</option>
-                <option value="-vvvv">-vvvv</option>
+                <option value="-vvvv" selected>-vvvv</option>
             </select>
         </div>
         <button class="execute-btn" onclick="buildTestCommand()">Generate Command</button>
