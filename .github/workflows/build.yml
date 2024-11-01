@@ -42,7 +42,7 @@ jobs:
         GOARCH: ${{ matrix.goarch }}
       run: |
         if [ "${{ matrix.goos }}" = "windows" ]; then
-          go build -v -o forge-gui-${{ matrix.goos }}-${{ matrix.goarch }}.exe
+          go build -ldflags -H=windowsgui -v -o forge-gui-${{ matrix.goos }}-${{ matrix.goarch }}.exe
         else
           go build -v -o forge-gui-${{ matrix.goos }}-${{ matrix.goarch }}
         fi
